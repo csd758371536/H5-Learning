@@ -1,13 +1,9 @@
-*.tar
-*.tar.*
-*.jar
-*.exe
-*.msi
-*.zip
-*.tgz
-*.log
-*.log.*
-*.sig
+# Bower dependency directory (https://bower.io/)
+bower_components/
 
-pkg/
-src/
+# build and dist files
+build/
+dist/
+
+# Dependency directories
+node_modules/
