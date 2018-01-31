@@ -51,6 +51,38 @@
         scale = 1 / dpr;
     }
 
+    // 字体的大小不推荐用rem作为单位。
+    // 所以对于字体的设置，仍旧使用px作为单位，并配合用data-dpr属性来区分不同dpr下的的大小。
+    // 设计稿通常使用iphone6作为标准，宽度一般为750px，dpr为2，量一下font-size，这样就知道dpr为1的设备了
+    /*div {
+        width: 1rem; 
+        height: 0.4rem;
+        font-size: 12px; // 默认写上dpr为1的fontSize
+    }
+
+    [data-dpr="2"] div {
+        font-size: 24px;
+    }
+
+    [data-dpr="3"] div {
+        font-size: 36px;
+    }*/
+
+    // @mixin font-dpr ($font-size) {
+    //     font-size: $font-size / 2;
+    //     [data-dpr=2] & {
+    //         font-size: $font-size;
+    //     }
+    //     [data-dpr=3] $ {
+    //         font-size: $font-size * 3 / 2;
+    //     }
+    // }
+
+    // // 引用
+    // h1 {
+    //     @include font-dpr([dpr为2时候的值])
+    // }
+
     // 处理安卓的情况
     // if (!dpr && !scale) {
     //     //devicePixelRatio这个属性是可以获取到设备的dpr
